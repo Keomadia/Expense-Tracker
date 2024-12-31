@@ -1,0 +1,66 @@
+{
+    "Jan57H": {
+        "firstname": "Jane",
+        "lastname": "Smith",
+        "fullname": "Jane Smith",
+        "password": "123456qwert",
+        "expenses": {
+            "Food": [],
+            "Entertainment": [],
+            "Transport": [],
+            "Health": [
+                {
+                    "date": "21 Oct 2024",
+                    "desc": "Antibiotics For Malaria Treatment ",
+                    "amount": 1200
+                }
+            ],
+            "Miscellanous": [],
+            "Others": []
+        }
+    },
+    "Joh14H": {
+        "firstname": "John",
+        "lastname": "Smith",
+        "fullname": "John Smith",
+        "password": "1111",
+        "expenses": {
+            "Food": [
+                {
+                    "date": "28 Oct 2024",
+                    "desc": "Got some foodstuffs",
+                    "amount": 1000000
+                }
+            ],
+            "Entertainment": [],
+            "Transport": [
+                {
+                    "date": "28 Oct 2024",
+                    "desc": "Home to school",
+                    "amount": 500
+                },
+                {
+                    "date": "02 Dec 2024",
+                    "desc": "Travelled to Lagos",
+                    "amount": 23559
+                }
+            ],
+            "Health": [
+                {
+                    "date": "28 Oct 2024",
+                    "desc": "Got Monthly Supplements",
+                    "amount": 30000
+                }
+            ],
+            "Miscellanous": [],
+            "Others": [],
+            "Clothes": [
+                {
+                    "date": "28 Oct 2024",
+                    "desc": "Got myself a new shoe",
+                    "amount": 20000
+                }
+            ]
+        }
+    }
+}

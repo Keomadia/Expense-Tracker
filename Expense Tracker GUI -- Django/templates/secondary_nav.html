@@ -1,0 +1,36 @@
+<nav class="secondary-navbar">
+    <ul>
+        <li><a href="{% url "home:add" %}">Add Expense</a></li>
+        <li><a href="{% url "home:all" %}">All Expense</a></li>
+
+
+
+        <li><a href="#total-expenses">Total Expenses</a></li>
+        <li><a href="#export-expenses">Export Expenses</a></li>
+
+
+        <li><a href="javascript:void(0)" id="addCategoryButton" >Add Category</a></li>
+        <li><a href="javascript:void(0)" id="removeCategoryButton">Remove Category</a></li>
+        
+
+        
+    </ul>
+</nav> 
+<br><br><br>
+
+
+
+
+<!-- Overlay for Input -->
+<div id="overlay" class="overlay">
+    <div class="overlay-content">
+      <span class="close-btn" id="closeOverlay">&times;</span>
+      <form method="POST" action="{% url "home:add_category" %}">
+        {% csrf_token %}
+        <h3 id='remheader'>Enter Category</h3>
+        <input type="text" id="categoryInput" placeholder="Enter category name" name="category">
+      
+        <button id="verifyButton">Verify</button>
+      </form>
+    </div>
+  </div>

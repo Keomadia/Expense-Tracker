@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    All Expenses
+{% endblock  %}
+
+
+{% block content  %}
+
+<div class="container">
+
+    {% include "secondary_nav.html" %}
+
+    <h1 style="margin:auto;">ALL EXPENSES</h1>
+    <table class="expense-table" >
+        <tr>
+            <td><h3>S/N</h3></td>
+            <td><h3>Category</h3></td>
+            <td><h3>Amount</h3></td>
+            <td><h3>Description</h3></td>
+            <td><h3></h3></td>
+        </tr>
+        {% for each in obj %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ each.category|capfirst }}</td>
+                <td>₦ {{ each.amount }}</td>
+                <td>{{ each.description }}</td>
+                <td class="btn-lst">
+                    <a href="/Home/del/{{each.srno}}"><button>Delete</button></a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+        <div class="pagination-controls">
+            <!-- Previous page button -->
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}">
+                    <button>Previous</button>
+                </a>
+            {% endif %}
+
+            <!-- See More button if there are more pages -->
+
+            <!-- Next page button -->
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">
+                    <button>Next</button>
+                </a>
+            {% endif %}
+        </div>
+
+    </div>
+
+{% endblock  %}

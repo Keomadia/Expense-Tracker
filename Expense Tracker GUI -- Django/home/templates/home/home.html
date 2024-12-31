@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock  %}
+
+
+{% block content  %}
+<div class="container">
+
+    {% include "secondary_nav.html" %}
+
+{% if messages %}
+    {% for message in messages  %}
+        <p id='msg' style="display: none;"> {{ message}}</p>
+        <script>
+            alert(document.getElementById('msg').textContent)
+        </script>
+    {% endfor %}
+{% endif %}
+
+    <div class="random">
+        <div>
+            {% comment %} <h1>Welcome back {{ user}} </h1> {% endcomment %}
+            <h1>This is the Home Page</h1>
+        </div>
+    </div>
+</div>
+
+
+{% endblock  %}

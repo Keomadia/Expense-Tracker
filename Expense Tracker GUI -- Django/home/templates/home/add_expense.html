@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Expense
+{% endblock  %}
+
+
+{% block content  %}
+<div class="container">
+   {% include "secondary_nav.html" %}
+        <div class="form-wrapper">
+            <h1>Expense for {{ user }}</h1>
+            <form class="form-group" method="post" action="{% url 'home:add' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.as_p }}
+                    <p>{{ error }}</p>
+                </div>
+                    <button class="btn">Update</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock  %}

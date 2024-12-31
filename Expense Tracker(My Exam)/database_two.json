@@ -1,0 +1,32 @@
+[
+    {
+        "Keoma": {
+            "Food": [],
+            "Transport": [
+                700
+            ],
+            "Miscellanous": [],
+            "Health": [],
+            "Subscriptions": [],
+            "Others": [],
+            "Savings": [],
+            "Foods": [],
+            "Save": []
+        },
+        "password": "1111"
+    },
+    {
+        "Dan": {
+            "Food": [
+                2000
+            ],
+            "Transport": [],
+            "Miscellanous": [],
+            "Health": [],
+            "Subscriptions": [],
+            "Others": [],
+            "Savings": []
+        },
+        "password": "AB12A"
+    }
+]
